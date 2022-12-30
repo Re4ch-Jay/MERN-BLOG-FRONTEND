@@ -1,0 +1,134 @@
+.settings {
+    display: flex;
+}
+
+.settingWrapper {
+    flex:  9;
+    padding: 20px;
+}
+
+.settingTitle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 15px 0;
+}
+
+.settingUpdateTitle {
+    color: coral;
+    font-size: 30px;
+}
+
+.settingDeleteTitle{
+    color: tomato;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.settingForm {
+    display: flex;
+    flex-direction: column;
+}
+.settingProfilePicture {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.settingImg{
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.settingProfilePictureIcon {
+    width: 25px;
+    height: 25px;
+    background-color: tomato;
+    color: white;
+    margin-left: 20px;
+    border-radius: 50%;
+    display: flex;
+    font-size: 20px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.settingForm label {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.settingForm input {
+    color: gray;
+    margin: 10px 0;
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid lightgray;
+}
+
+.settingSubmit {
+    width: 150px;
+    align-self: center;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background-color: teal;
+    padding: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+/* modal */
+
+.modal{
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    background: #eee;
+    padding: 20px;
+    border-radius: 5px;
+
+}
+
+.modalTextTitle {
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px 0;
+}
+
+.modalOption {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.modalYes {
+    background-color: #4a9fe4;
+    padding: 15px;
+    color: white;
+    border-radius: 7px;
+    width: 50px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    
+}
+
+.modalNo{
+    background-color: crimson;
+    padding: 15px;
+    color: white;
+    border-radius: 7px;
+    width: 50px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+}
+
+i {
+    cursor: pointer;
+}
