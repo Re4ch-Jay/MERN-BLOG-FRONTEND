@@ -12,7 +12,7 @@ function Home() {
   useEffect(() => {
     const fetchPost = async () => {
       try {
-        const res = await axios.get("/post"+location.search)
+        const res = await axios.get("https://blogcodewithreach-api.onrender.com/api/post"+location.search)
         setPosts(res.data)
       } catch (error) {
         console.log(error)

@@ -11,7 +11,7 @@ function Sidebar() {
     const PF = "http://localhost:4000/images/"
     useEffect(() => {
         const fetchCategories = async () => {
-            const res = await axios.get("/categories")
+            const res = await axios.get("https://blogcodewithreach-api.onrender.com/api/categories")
             setCategories(res.data)
             console.log(res)
         }   

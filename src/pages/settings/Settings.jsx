@@ -17,7 +17,7 @@ function Settings() {
   const navigate = useNavigate()
 
   const handleDelete = async () => {
-    const res = await axios.delete(`/user/${user._id}`, {data: {userId: user._id}});
+    const res = await axios.delete(`https://blogcodewithreach-api.onrender.com/api/user/${user._id}`, {data: {userId: user._id}});
     if(res) {
       setDeleteModal(false)
       dispatch({type: "LOGOUT"})
@@ -45,7 +45,7 @@ function Settings() {
         }
     }
     try {
-      const res = await axios.put(`/user/${user._id}`, updatedUser)
+      const res = await axios.put(`https://blogcodewithreach-api.onrender.com/api/user/${user._id}`, updatedUser)
       console.log(res)
       dispatch({type: "UPDATE_SUCCESS", payload: res.data})
     } catch (error) {
@@ -58,7 +58,7 @@ function Settings() {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const res = await axios.get(`/user/${user._id}`)
+        const res = await axios.get(`https://blogcodewithreach-api.onrender.com/api/user/${user._id}`)
         console.log(res.data)
         setUsername(res.data.username);
         setEmail(res.data.email);

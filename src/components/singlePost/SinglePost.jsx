@@ -16,7 +16,7 @@ function SinglePost() {
   const {user} = useContext(Context);
   useEffect(() => {
     const getPost = async () => {
-      const res = await axios.get("/post/" + path)
+      const res = await axios.get("https://blogcodewithreach-api.onrender.com/api/post/" + path)
       console.log(res.data)
       setPost(res.data)
       setTitle(res.data.title)
