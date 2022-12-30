@@ -1,7 +1,7 @@
 import './post.css'
 import {Link} from 'react-router-dom'
 function Post({post}) {
-  const PF = "https://blogcodewithreach-api.onrender.com/api/images/"
+  const PF = "http://localhost:4000/images/"
   return (
     <div className='post'>
       {post.photo && (

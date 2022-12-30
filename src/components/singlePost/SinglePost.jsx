@@ -16,7 +16,7 @@ function SinglePost() {
   const {user} = useContext(Context);
   useEffect(() => {
     const getPost = async () => {
-      const res = await axios.get("https://blogcodewithreach-api.onrender.com/api/post/" + path)
+      const res = await axios.get("/post/" + path)
       console.log(res.data)
       setPost(res.data)
       setTitle(res.data.title)
@@ -25,11 +25,11 @@ function SinglePost() {
     }
     getPost();
   }, [])
-  const PF = "https://blogcodewithreach-api.onrender.com/api/images/"
+  const PF = "http://localhost:4000/images/"
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`https://blogcodewithreach-api.onrender.com/api/post/${post._id}`, {data: {username: user.username}})
+      await axios.delete(`/post/${post._id}`, {data: {username: user.username}})
       navigate('/')
     } catch (error) {
       console.log(error)
@@ -38,7 +38,7 @@ function SinglePost() {
 
   const handleUpdate = async () => {
     try {
-      await axios.put(`https://blogcodewithreach-api.onrender.com/api/post/${post._id}`, {username: user.username, title, desc})
+      await axios.put(`/post/${post._id}`, {username: user.username, title, desc})
       setUpdateMode(false)
     } catch (error) {
       console.log(error)

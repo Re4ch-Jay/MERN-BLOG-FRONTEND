@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Context } from '../../context/Context';
 import { useContext } from 'react';
 function TopBar() {
-  const PF = "https://blogcodewithreach-api.onrender.com/api/images/"
+  const PF = "http://localhost:4000/images/"
   const {user, dispatch} = useContext(Context);
   const handleLogout = () => {
     dispatch({type:"LOGOUT"})

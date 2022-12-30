@@ -13,11 +13,11 @@ function Settings() {
   const [deleteModal, setDeleteModal] = useState(false);
   
   const {user, dispatch} = useContext(Context)
-  const PF = "https://blogcodewithreach-api.onrender.com/api/images/"
+  const PF = "http://localhost:4000/images/"
   const navigate = useNavigate()
 
   const handleDelete = async () => {
-    const res = await axios.delete(`https://blogcodewithreach-api.onrender.com/api/user/${user._id}`, {data: {userId: user._id}});
+    const res = await axios.delete(`/user/${user._id}`, {data: {userId: user._id}});
     if(res) {
       setDeleteModal(false)
       dispatch({type: "LOGOUT"})

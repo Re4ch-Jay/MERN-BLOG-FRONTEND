@@ -28,15 +28,15 @@ function Write() {
             newPost.photo = filename
 
             try {
-                await axios.post('https://blogcodewithreach-api.onrender.com/api/upload', data)
+                await axios.post('/upload', data)
             } catch (error) {
                 console.log(error)
             }
 
         }
         try {
-            const res = await axios.post('https://blogcodewithreach-api.onrender.com/api/post', newPost)
-            navigate(`https://blogcodewithreach-api.onrender.com/api/post/${res.data._id}`)
+            const res = await axios.post('/post', newPost)
+            navigate(`/post/${res.data._id}`)
         } catch (error) {
             console.log(error)
         } 
