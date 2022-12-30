@@ -8,10 +8,10 @@ import { Context } from '../../context/Context'
 function Sidebar() {
     const [categories, setCategories] = useState([])
     const {user} = useContext(Context)
-    const PF = "http://localhost:4000/images/"
+    const PF = "https://blogcodewithreach-api.onrender.com/api/images/"
     useEffect(() => {
         const fetchCategories = async () => {
-            const res = await axios.get("/categories")
+            const res = await axios.get("https://blogcodewithreach-api.onrender.com/api/categories")
             setCategories(res.data)
         }   
         fetchCategories()
