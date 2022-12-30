@@ -13,6 +13,7 @@ function Sidebar() {
         const fetchCategories = async () => {
             const res = await axios.get("/categories")
             setCategories(res.data)
+            console.log(res)
         }   
         fetchCategories()
     }, [])
