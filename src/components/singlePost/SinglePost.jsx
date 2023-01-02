@@ -29,7 +29,7 @@ function SinglePost() {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`/post/${post._id}`, {data: {username: user.username}})
+      await axios.delete(`https://blogcodewithreach-api.onrender.com/api/post/${post._id}`, {data: {username: user.username}})
       navigate('/')
     } catch (error) {
       console.log(error)
@@ -38,7 +38,7 @@ function SinglePost() {
 
   const handleUpdate = async () => {
     try {
-      await axios.put(`/post/${post._id}`, {username: user.username, title, desc})
+      await axios.put(`https://blogcodewithreach-api.onrender.com/api/post/${post._id}`, {username: user.username, title, desc})
       setUpdateMode(false)
     } catch (error) {
       console.log(error)
