@@ -10,7 +10,7 @@ function SearchBar() {
         e.preventDefault()
         	
         if(searchTerm) {
-            navigate(`/post?title=${searchTerm}`)
+            navigate(`?title=${searchTerm}`)
         }
     }
   return (
