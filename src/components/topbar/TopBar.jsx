@@ -2,6 +2,7 @@ import './topbar.css';
 import { Link } from 'react-router-dom';
 import { Context } from '../../context/Context';
 import { useContext } from 'react';
+import SearchBar from '../search/SearchBar';
 function TopBar() {
   const PF = "http://localhost:4000/images/"
   const {user, dispatch} = useContext(Context);
@@ -48,7 +49,7 @@ function TopBar() {
           } 
           
         </Link>
-          <i className="topSearchIcon fa-solid fa-magnifying-glass"></i>
+          <SearchBar />
       </div>
     </div>
   )

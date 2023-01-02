@@ -1,0 +1,16 @@
+
+.searchForm {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.searchInput {
+    padding: 10px;
+    border-radius: 50px;
+    margin-left: 10px;
+}
+
+.searchButton {
+    background: none;
+    border: none;
+}
