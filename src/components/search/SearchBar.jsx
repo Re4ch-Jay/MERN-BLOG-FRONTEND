@@ -8,9 +8,9 @@ function SearchBar() {
 
     const handleSearch = (e) => {
         e.preventDefault()
-
-        if(searchTerm) {
-            navigate(`https://blogcodewithreach-api.onrender.com/api/post?title=${searchTerm}`)
+        	
+        if(searchTerm.toLocaleLowerCase()) {
+            navigate(`/post?title=${searchTerm.toLocaleLowerCase()}`)
         }
     }
   return (
