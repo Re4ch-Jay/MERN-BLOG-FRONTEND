@@ -9,8 +9,8 @@ function SearchBar() {
     const handleSearch = (e) => {
         e.preventDefault()
         	
-        if(searchTerm.toLocaleLowerCase()) {
-            navigate(`/post?title=${searchTerm.toLocaleLowerCase()}`)
+        if(searchTerm) {
+            navigate(`/post?title=${searchTerm}`)
         }
     }
   return (
